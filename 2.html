@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        2
+    </title>
+    <style>
+        h1{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body style="text-align:center;">
+
+    <h1 id="h1">
+    Hello
+    
+    </h1>
+
+    <button onclick="Run1()">
+        Click Me
+    </button>
+
+    <p id="UP" style="font-size: 16px;
+                        font-weight: bold;">
+    </p>
+
+    <button onclick="Run()">
+        Click here
+    </button>
+
+    <p id="_DOWN" style="color:green;
+                            font-size: 20px;
+                            font-weight: bold;">
+    </p>
+
+    <script>
+        
+        document.body.style.backgroundColor = "lightgreen";
+        
+        document.body.style.fontSize = "48pt";
+        document.getElementById("h1").innerHTML = "Hello World!";
+        document.getElementById("h1").style.color = "red";
+        var el_up = document.getElementById("_UP");
+        var el_down = document.getElementById("_DOWN");
+        var str = "Click on button to change the background color";
+                
+        el_up.innerHTML = str;
+                
+        function changeColor(color) {
+            document.body.style.background = color;
+        }
+        
+        function Run() {
+            changeColor('yellow');
+            el_down.innerHTML = "Background Color changed";
+        }    
+        function Run1() {
+            changeColor('cyan');
+            el_down.innerHTML = "Background Color changed";
+        }       
+    </script>
+</body>
+
+</html>
